@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+repositories {
+	maven {
+		url = "http://dvs1.progwml6.com/files/maven"
+	}
+}
+
+version = "1.10.2-0.0.1"
+group= "tamaized.sanpokenju"
+archivesBaseName = "SanpoKenju"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+minecraft {
+    version = "1.10.2-12.18.1.2066"
+    runDir = "run"
+    mappings = "snapshot_20160518"
+    makeObfSourceJar = false
+	useDepAts = true
+}
+
+dependencies {
+	deobfCompile "mezz.jei:jei_1.10.2:3.9.0.245:api"
+	runtime "mezz.jei:jei_1.10.2:3.9.0.245"
+	compile files('libs/TamModized-1.10.2-0.1.7.jar')
+}
+
+processResources
+{
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

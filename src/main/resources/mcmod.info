@@ -1,0 +1,17 @@
+[
+{
+  "modid": "sanpokenju",
+  "name": "Sanpo Kenju",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tamaized"],
+  "credits": "Tamaized",
+  "logoFile": "",
+  "requiredMods": [ "Forge", "tammodized" ],
+  "dependencies": [ "tammodized" ],
+  "useDependencyInformation": true
+}
+]
