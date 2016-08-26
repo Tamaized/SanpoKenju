@@ -17,7 +17,7 @@ public class SanpoKenjuItems implements ITamRegistry {
 	public void preInit() {
 		modelList = new ArrayList<ITamModel>();
 		
-		modelList.add(sanpoKenju = new ItemSanpoKenju(null, SanpoKenju.materials.zanpakuto, "sanpoKenju"));
+		modelList.add(sanpoKenju = new ItemSanpoKenju(SanpoKenju.creativeTabs.tab, SanpoKenju.materials.zanpakuto, "sanpoKenju"));
 	}
 
 	@Override

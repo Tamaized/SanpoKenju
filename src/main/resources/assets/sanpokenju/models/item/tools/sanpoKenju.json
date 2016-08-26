@@ -1,0 +1,65 @@
+{
+    "parent": "block/cube_all",
+	"__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "textures": {
+        "particle": "sanpokenju:models/SanpoKenju",
+        "0": "sanpokenju:models/SanpoKenju",
+        "1": "sanpokenju:models/SanpoKenjuTsuba"
+    },
+    "elements": [
+        {
+            "name": "Blade",
+            "from": [ 8.0, 0.0, 7.5 ], 
+            "to": [ 8.1, 8.0, 8.0 ], 
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "east": { "texture": "#0", "uv": [ 7.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#0", "uv": [ 7.0, 0.0, 6.9, 16.0 ] },
+                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 7.0, 16.0 ] }
+            }
+        },
+        {
+            "name": "tsuba",
+            "from": [ 7.3, 8.0, 7.1 ], 
+            "to": [ 8.8, 8.1, 8.6 ], 
+            "faces": {
+                "up": { "texture": "#1", "uv": [ 0.0, 0.0, 11.0, 12.0 ] },
+                "down": { "texture": "#1", "uv": [ 11.0, 12.0, 0.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "hilt",
+            "from": [ 8.0, 8.0, 7.5 ], 
+            "to": [ 8.1, 12.0, 8.0 ], 
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 12.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#0", "uv": [ 7.3, 0.0, 11.0, 16.0 ] },
+                "south": { "texture": "#0", "uv": [ 12.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#0", "uv": [ 7.3, 0.0, 11.0, 16.0 ] },
+                "up": { "texture": "#0", "uv": [ 7.0, 0.0, 11.0, 1.0 ] }
+            }
+        }
+    ],
+    "display": {
+		"thirdperson_righthand": {
+            "rotation": [ 220, 180, 0 ],
+            "translation": [ 0, 3, 4.5 ],
+            "scale": [ 3.0, 3.0, 3.0 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 220, 180, 0 ],
+            "translation": [ 0, 3, 4.5 ],
+            "scale": [ 3.0, 3.0, 3.0 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 160, 180, 0 ],
+            "translation": [ 0, 3, 4.5 ],
+            "scale": [ 3.0, 3.0, 3.0 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 160, 180, 0 ],
+            "translation": [ 0, 3, 4.5 ],
+            "scale": [ 3.0, 3.0, 3.0 ]
+        }
+    }
+}
