@@ -2,52 +2,54 @@ package Tamaized.SanpoKenju.registry;
 
 import java.util.ArrayList;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import Tamaized.SanpoKenju.SanpoKenju;
-import Tamaized.SanpoKenju.items.ItemSanpoKenju;
 import Tamaized.TamModized.registry.ITamModel;
 import Tamaized.TamModized.registry.ITamRegistry;
 
-public class SanpoKenjuItems implements ITamRegistry {
+public class SanpoKenjuCreativeTabs implements ITamRegistry {
 
-	private ArrayList<ITamModel> modelList;
-	
-	public static ItemSanpoKenju sanpoKenju;
+	public static CreativeTabs tab;
 
 	@Override
 	public void preInit() {
-		modelList = new ArrayList<ITamModel>();
-		
-		modelList.add(sanpoKenju = new ItemSanpoKenju(null, SanpoKenju.materials.zanpakuto, "sanpoKenju"));
+		tab = new CreativeTabs("SanpoKenju") {
+			@Override
+			public Item getTabIconItem() {
+				return SanpoKenju.items.sanpoKenju;
+			}
+		};
 	}
 
 	@Override
 	public void init() {
-		
+
 	}
 
 	@Override
 	public void postInit() {
-		
+
 	}
 
 	@Override
 	public void clientPreInit() {
-		
+
 	}
 
 	@Override
 	public void clientInit() {
-		
+
 	}
 
 	@Override
 	public void clientPostInit() {
-		
+
 	}
 
 	@Override
 	public ArrayList<ITamModel> getModelList() {
-		return modelList;
+		return new ArrayList<ITamModel>();
 	}
 
 	@Override

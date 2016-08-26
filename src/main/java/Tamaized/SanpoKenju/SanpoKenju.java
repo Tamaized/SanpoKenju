@@ -12,7 +12,9 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import org.apache.logging.log4j.LogManager;
 
+import Tamaized.SanpoKenju.registry.SanpoKenjuCreativeTabs;
 import Tamaized.SanpoKenju.registry.SanpoKenjuItems;
+import Tamaized.SanpoKenju.registry.SanpoKenjuMaterials;
 import Tamaized.TamModized.TamModBase;
 import Tamaized.TamModized.TamModized;
 import Tamaized.TamModized.proxy.AbstractProxy;
@@ -36,6 +38,8 @@ public class SanpoKenju extends TamModBase {
 	@SidedProxy(clientSide = "Tamaized.SanpoKenju.proxy.ClientProxy", serverSide = "Tamaized.SanpoKenju.proxy.ServerProxy")
 	public static AbstractProxy proxy;
 
+	public static SanpoKenjuCreativeTabs creativeTabs;
+	public static SanpoKenjuMaterials materials;
 	public static SanpoKenjuItems items;
 
 	@Override
@@ -49,7 +53,9 @@ public class SanpoKenju extends TamModBase {
 		channel = NetworkRegistry.INSTANCE.newEventDrivenChannel(networkChannelName);
 
 		// Register the Registers
-		// register(items = new SanpoKenjuItems());
+		register(creativeTabs = new SanpoKenjuCreativeTabs());
+		register(materials = new SanpoKenjuMaterials());
+		register(items = new SanpoKenjuItems());
 
 		// Register Sounds Events
 		// SanpoKenjuSoundEvents.register();
@@ -81,7 +87,7 @@ public class SanpoKenju extends TamModBase {
 		super.postInit(e);
 
 		// Register Network
-		//channel.register(new ServerPacketHandler());
+		// channel.register(new ServerPacketHandler());
 
 		// Proxy Stuff
 		proxy.postInit();
