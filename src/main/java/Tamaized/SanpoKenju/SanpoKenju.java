@@ -1,5 +1,6 @@
 package Tamaized.SanpoKenju;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import org.apache.logging.log4j.LogManager;
 
+import Tamaized.SanpoKenju.events.DragonDeathEvent;
 import Tamaized.SanpoKenju.registry.SanpoKenjuCreativeTabs;
 import Tamaized.SanpoKenju.registry.SanpoKenjuItems;
 import Tamaized.SanpoKenju.registry.SanpoKenjuMaterials;
@@ -73,6 +75,9 @@ public class SanpoKenju extends TamModBase {
 		logger.info("Starting SanpoKenju Init");
 
 		super.init(event);
+
+		// Events
+		MinecraftForge.EVENT_BUS.register(new DragonDeathEvent());
 
 		// Proxy Stuff
 		proxy.init();

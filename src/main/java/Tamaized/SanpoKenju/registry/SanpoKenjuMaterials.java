@@ -14,7 +14,7 @@ public class SanpoKenjuMaterials implements ITamRegistry {
 
 	@Override
 	public void preInit() {
-		zanpakuto = EnumHelper.addToolMaterial("Zanpakuto", 8, 12000, 50.0F, 13.0F, 30);
+		zanpakuto = EnumHelper.addToolMaterial("Zanpakuto", 8, 12000, 50.0F, 913.0F, 30);
 	}
 
 	@Override
